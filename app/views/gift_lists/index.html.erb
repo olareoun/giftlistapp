@@ -1,0 +1,25 @@
+<h1>Listing gift_lists</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gift_lists.each do |gift_list| %>
+  <tr>
+    <td><%= gift_list.title %></td>
+    <td><%= gift_list.description %></td>
+    <td><%= link_to 'Show', gift_list %></td>
+    <td><%= link_to 'Edit', edit_gift_list_path(gift_list) %></td>
+    <td><%= link_to 'Destroy', gift_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gift list', new_gift_list_path %>

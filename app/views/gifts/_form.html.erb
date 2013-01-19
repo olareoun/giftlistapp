@@ -1,0 +1,11 @@
+<%= form_for([@gift_list, @gift_list.gifts.build]) do |f| %>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<b>Title:</b>
+<%= @gift_list.title %>
+</p>
+
+<p>
+<b>Description:</b>
+<%= @gift_list.description %>
+</p>
+
+<h2>Gifts</h2>
+<%= render @gift_list.gifts %>
+
+<h2>Add a gift:</h2>
+<%= render "gifts/form" %>
+<br />
+<%= link_to 'Edit gift_list', edit_gift_list_path(@gift_list) %> |
+<%= link_to 'Back to gift_lists', gift_lists_path %> |
+
+
+
