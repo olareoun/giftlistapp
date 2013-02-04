@@ -1,4 +1,13 @@
 class GiftsController < ApplicationController
+  def new
+    @gift = Gift.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @gift }
+    end
+  end
+
   def create
     @gift_list = GiftList.find(params[:gift_list_id])
     @gift = @gift_list.gifts.create(params[:gift])
