@@ -1,5 +1,6 @@
 class GiftsController < ApplicationController
   def new
+    @gift_list = GiftList.find(params[:gift_list_id])
     @gift = Gift.new
 
     respond_to do |format|

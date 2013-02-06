@@ -7,6 +7,8 @@ gem 'rails', '3.2.9'
 
 gem 'sqlite3'
 
+gem 'libv8', '3.11.8.0'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,8 +17,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  gem 'less-rails'
+  gem 'therubyracer' #, :path => 'F:\desarrollo\otros\therubyracer_for_windows-master'
+  gem 'twitter-bootstrap-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
