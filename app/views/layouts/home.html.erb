@@ -36,34 +36,9 @@
   </head>
   <body>
 
-        <div class="container-fluid">
-	      <div class="row-fluid">
-            <div class="span4" id="side-menu">
-                <div class="background-div">
-                    <%= image_tag 'gifts.jpg' %>
-                </div>
-            </div>
-            <div class="span8">
-                <div class="row-fluid">
-                </div>
-                <div class="row-fluid">
-                    <ul class="nav nav-tabs">
-                        <li class="active">
-                            <%= link_to image_tag('mis-regalos-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
-                        </li>
-                        <li>
-                            <%= link_to image_tag('tus-regalos-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
-                        </li>
-                        <li>
-                            <%= link_to image_tag('notificaciones-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
-                        </li>
-                    </ul>
-    	          <%= bootstrap_flash %>
-    	          <%= yield %>
-                </div>
-            </div>
-          </div>
-        </div>
+	<div class="home">
+	    <%= link_to image_tag('home-big.jpg', :class => 'img-rounded'), gift_lists_path %>
+	</div>
 
     <!-- Javascripts
     ================================================== -->

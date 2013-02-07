@@ -1,0 +1,13 @@
+<ul class="nav nav-tabs">
+    <li class="active">
+        <%= link_to image_tag('mis-regalos-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
+    </li>
+    <li>
+        <%= link_to image_tag('tus-regalos-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
+    </li>
+    <li>
+        <%= link_to image_tag('notificacion-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
+    </li>
+</ul>
+<%= bootstrap_flash %>
+<%= yield %>
