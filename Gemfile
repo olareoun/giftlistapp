@@ -9,6 +9,14 @@ gem 'sqlite3'
 
 gem 'libv8', '3.11.8.0'
 
+gem 'devise'
+
+group :test do
+	gem 'database_cleaner'
+	gem 'rspec-rails', '>= 2.0.0'
+	gem 'cucumber-rails', '>= 0.3.2'
+#	gem 'webrat', '>= 0.7.2'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

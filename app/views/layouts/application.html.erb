@@ -47,17 +47,10 @@
                 <div class="row-fluid">
                 </div>
                 <div class="row-fluid">
-                    <ul class="nav nav-tabs">
-                        <li class="active">
-                            <%= link_to image_tag('mis-regalos-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
-                        </li>
-                        <li>
-                            <%= link_to image_tag('tus-regalos-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
-                        </li>
-                        <li>
-                            <%= link_to image_tag('notificaciones-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
-                        </li>
-                    </ul>
+                    <%= render 'layouts/logged' %>
+                  <% if user_signed_in? %>
+                     <h6><%= current_user.email %></h6>
+                  <% end %>
     	          <%= bootstrap_flash %>
     	          <%= yield %>
                 </div>

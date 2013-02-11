@@ -1,4 +1,7 @@
 class GiftListsController < ApplicationController
+
+  before_filter :authenticate_user!
+
   # GET /gift_lists
   # GET /gift_lists.json
   def index
@@ -41,6 +44,7 @@ class GiftListsController < ApplicationController
   # POST /gift_lists.json
   def create
     @gift_list = GiftList.new(params[:gift_list])
+    @gift_list.creator = current_user
 
     respond_to do |format|
       if @gift_list.save

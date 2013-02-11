@@ -1,0 +1,14 @@
+<ul class="nav nav-tabs">
+    <% if user_signed_in? %>
+        <li class="active">
+            <%= link_to image_tag('mis-regalos-mini.jpg', :class => 'img-rounded'), gift_lists_path %>
+        </li>
+        <li>
+            <%= link_to image_tag('salir-mini.jpg', :class => 'img-rounded'), destroy_user_session_path, :method => :delete %>
+        </li>
+    <% else %>
+        <li>
+            <%= link_to image_tag('entrar-mini.jpg', :class => 'img-rounded'), new_user_session_path %>
+        </li>
+    <% end %>
+</ul>
