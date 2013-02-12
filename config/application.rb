@@ -61,6 +61,8 @@ module Giftlistapp
 
     config.assets.initialize_on_precompile = false
 
+    config.filter_parameters += [:password, :password_confirmation]
+
     config.generators do |g|
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
