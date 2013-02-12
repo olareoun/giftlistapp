@@ -60,5 +60,15 @@ module Giftlistapp
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
+
+    config.generators do |g|
+      g.test_framework :rspec, fixture: true
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+      g.view_specs false
+      g.helper_specs false
+      g.stylesheets = false
+      g.javascripts = false
+      g.helper = false
+    end
   end
 end
